@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block headtitle %}{{ flatpage.title }} - {% endblock %}
+
+{% block breadcrumbs %} &rarr; {{ flatpage.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ flatpage.title }}</h1>	
+    <!-- http://programanddesign.com/uncategorized/django-flatpages-markdown-and-syntax-highlighting/ -->
+    {% load markup %}
+    {{ flatpage.content|markdown:"codehilite,tables,footnotes,nl2br" }}
+{% endblock %}

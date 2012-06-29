@@ -1,0 +1,257 @@
+/*
+Description: ippc.int website main stylesheet for screen and projection - version 3.0
+File: ippc3.0.css
+Author: Simon Griffee
+Last update: Tuesday, 22 May 2012 at 09:18:13
+*/
+
+/* =Reset ---------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:1em;font-family:inherit;vertical-align:baseline;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+body {background: #fff url(/static/img/website-bar-3.0.gif) repeat-x; color:#000; font-family:helvetica, arial, sans-serif; color:#000; padding:10px 0 0 0; margin:0; }
+
+div#container {max-width:1200px; text-align:center; margin:0 auto; padding:0;}
+
+div#header {font-size:0.9em; border-bottom:1px solid #eee; border-top:1px solid #fff;
+    overflow:auto; width:100%; text-align:left;} /* http://www.quirksmode.org/css/clearing.html */
+div#user {float:right; padding:1em 1em 0;}
+form#localsearch {float:right; margin:0 !important; padding:0 !important;}
+div#header p, div#header input {margin-top:0;}
+
+div#content {clear:both; padding:1.5em 2em; text-align:left;}
+
+div#footer {padding:0 1em 1em; font-size:0.9em; border-top:1px solid #eee; text-align:left;}
+ul.pagenav {margin:1em 0;}
+ul.pagenav li {display:inline; margin:1em 1em 1em -0.5em;}
+ul.pagenav li a {padding:0.5em;}
+
+p {max-width:46em; font-size:0.9em; line-height:1.3em; margin:0.5em 0 1em;}
+p.breadcrumbs {float:left; padding:1em 1em 0; max-width:100% !important;}
+div.logo {padding:1em 1em 0;}
+p.ruler {clear:both; height:0; width:0; border:none; margin:0; padding:0; text-indent:-2000em;} /* hidden ruler to clear the floats above and at the same time provide a ruler divider for the header visible when CSS is off for older browsers */
+
+a {color:#03C; text-decoration:underline;}
+div#contentbox a:visited, div#sidebarbox a:visited {color:#360;} /* possible brown: #663 */
+a:hover {text-decoration:none; background:#FF6;}
+a.imglink:hover {border:none; background:none;}
+a:active {color:#f90; border:none;}
+.btn, input.btn {text-decoration:none; color:#fff; background:#090; padding:0.2em 0.4em;}
+.btn:hover {cursor:pointer;}
+.btn .quiet {color:#eee;}
+input.btn {border:0; padding:0.3em 0.4em; font-size:0.9em;}
+input.primary.submit.btn {padding:1em 1.5em; font-size:1.2em;}
+
+fieldset {border:1px solid #eee;}
+fieldset fieldset {margin:1em 0; padding:0.20em; border:1px solid #f0f0f0;}
+legend {font-weight:bold;}
+input.text, input.textarea {padding:0.5em;}
+textarea {width:98%; font-size:0.8em !important;}
+div.notescontainer {border-color:#eee;}
+
+h1 {margin:0 0 0.25em; font-size:1.8em; font-weight:bold;}
+h2 {margin:1em 0 .25em; font-size:1.4em; font-weight:bold;}
+h2.btn {display:inline;}
+h3 {margin:1em 0 .25em; font-size:1em; text-transform:uppercase; letter-spacing:1px;}
+h4 {margin:1em 0 .25em; font-size:1em; font-style:italic; letter-spacing:1px;}
+h5 {margin:1em 0 .25em; font-size:0.9em; font-weight:normal; text-transform:uppercase; letter-spacing:1px;}
+h6 {margin:1em 0 .25em; font-size:0.9em; font-weight:normal; font-style:italic; letter-spacing:1px;}
+
+code {font:1em Monaco,monospaced; color:#366;}    
+pre {border:1px solid #ccc; background:#eee; overflow:scroll; padding:0.5em; margin-bottom:2em;}
+img {border:0;}
+strong {font-weight:bold;}
+em {font-style:italic;}
+
+/*ul {list-style:disc; margin-left:1em; padding-left:1em;}*/
+/*ul {list-style:none; margin:0; padding:0;}
+ul.bullets {list-style:circle; margin-left:0.5em;}
+ul.bullets ul.bullets {margin-left:1em;}*/
+/*ul a {text-decoration:none;}*/
+/*ul li {line-height:1.5em; font-size:0.9em;}
+li ul {font-size:0.9em; margin-left:1em;}*/
+
+/*=Lists ------- */
+
+li, dd, dt {font-size:0.9em;}
+li ul, li ol {margin:0 0 0 1.25em;}
+ul, ol {margin:0 0 1.5em 1.5em;}
+ul {list-style-type:disc;}
+ul.nobullets {list-style:none !important; margin-left:0 !important;}
+ol {list-style-type:decimal;}
+dl {margin:0 0 1em 0; border:none;}
+dl dt {font-weight:bold; color:#111;}
+dd {margin-bottom:0.5em;}
+
+
+table {width:100%; margin:0 0 1em; border-collapse:collapse; clear:both; /* needed to add this for safari collapse issue */ border:1px solid #eee;}
+caption {caption-side:top; text-align:left; font-size:1em; line-height:1.4em; color:#000; padding:1em; font-weight:bold; border:1px solid #eee; background:#eee;}
+td {padding:4px 5px; text-align:left; vertical-align: top; font-size:0.9em; line-height:1.35em; border:1px solid #eee;}
+td.typetd {font-size:0.8em !important; width:10em;}
+td a {font-weight:normal;}
+td strong a {font-weight:bold;}
+th {padding:4px 5px; font-weight:bold; text-align:left; font-size:0.9em; line-height:1.4em; vertical-align:top; color:#333; background:#eee;}
+tr.quiet a {color:#999;}
+table.tablesorter .header,
+table.tablesorter .headerSortUp,
+table.tablesorter .headerSortDown {background:#eee no-repeat 0.5em 50% !important; padding-left:1.25em;}
+table.tablesorter .header {background-image: url(/static/img/tablesorter-bg.gif) !important;}
+table.tablesorter .header:hover {cursor:pointer;}
+table.tablesorter .headerSortUp {background-image: url(/static/img/tablesorter-desc.gif) !important;}
+table.tablesorter .headerSortDown {background-image: url(/static/img/tablesorter-asc.gif) !important;}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {background-color:#ddd !important; color:#000;} /* selected header */
+
+/* =Zebra stripe table td background color */
+table tr.odd td, tr.odd td, tr.odd th {background:#f5f5f5;}
+/*table.tablesorter th {cursor:pointer !important;}*/
+
+tr:hover, th:hover, tr.odd td:hover, th.odd td:hover {background:#ffc !important;}
+
+.floatright {float:right;}
+.floatleft {float:left;}
+.alignright {text-align:right;}
+.alignleft {text-align:left;}
+.clearboth {clear:both;}
+.tip {color:#666; font-size:0.8em; line-height:0.8em; font-style:normal;}
+.tip a {font-weight:normal;}
+.quiet {color:#999;}
+div.quietlinks a {color:#999;}
+.small {font-size:0.9em;}
+.smaller {font-size:0.8em;}
+.highlight {background:#ffc !important;}
+.hightlightbold {background:#ffc !important; color:#000 !important;}
+.normal {font-weight:normal;}
+.lowercase {text-transform:lowercase;}
+
+div.columnonehalf {width:45%; float:left; padding-right:3em;}
+div.columnonethird {width:28%; float:left; padding-right:3em;}
+
+div.comment {padding:0.65em; border:1px solid #eee; margin-bottom:2em; background:#fafafa}
+div.author {background:#eee; float:left; width:100%; margin:-0.65em 0 1em -0.65em; padding-right:1.35em;}
+div.author img.photo {float:left; padding:0.75em; height:4.25em;}
+div.author dl {font-size:0.9em; padding:0.75em 0.75em 0.75em 8em;}
+div.author dd {display:inline;}
+div.comment.introduction {border:5px solid #fc0; margin:0 3em 0 0;}
+div.comment.introduction div.author {background:#fc0;}
+div.commentattachment {}
+div.attachmentsintable a {display:block;}
+/*div.commentmeta {background:#ffc; float:left; width:100%; margin:-0.65em 0 1em -0.65em; padding-right:1.35em;}*/
+
+/* =Icons ------------------------------------------ See http://hypertexthero.com/work/icons.html for documentation */
+
+/* First we define the background image containing all the icons */
+.icn-addnew-inline, .icn-adoptedbadge, .icn-blank, .icn-bookmark, .icn-contact-add, .icn-copylink, .icn-doc, .icn-edit, .icn-email-add, .icn-error, .icn-event-add, .icn-feed, .icn-group-add, .icn-img, .icn-keyword-add, .icn-news-add, .icn-noncontracting, .icn-page-add, .icn-page-delete, .icn-page-edit, .icn-pdf, .icn-pestreport-add, .icn-ppt, .icn-preview, .icn-project-add, .icn-project, .icn-publication-add, .icn-required, .icn-subscribe, .icn-translatable, .icn-txt, .icn-user-add, .icn-warning, .icn-www-add, .icn-www, .icn-xls, .icn-zip, .icn-success, .icn-territory, .icn-backtotop, .icn-delete {background:url(/static/img/icons.gif) no-repeat top left; padding:1px 0 2px 20px !important; /*font-size:0.9em;*/}
+
+/* Then we assign the background position of each particular icon on the image above with X and Y coordinates. */
+.icn-addnew-inline {background-position:0 0;} 
+.icn-adoptedbadge {background-position:0 -66px;} 
+.icn-blank {background-position:0 -132px;} 
+.icn-bookmark {background-position:0 -198px;} 
+.icn-contact-add {background-position:0 -264px;} 
+.icn-copylink {background-position:0 -330px;} 
+.icn-doc {background-position:0 -396px;} 
+.icn-edit {background-position:0 -462px;} 
+.icn-email-add {background-position:0 -528px;} 
+.icn-error {background-position:0 -594px; font-size:0.95em; color:#8a1f11;} 
+.icn-event-add {background-position:0 -660px;} 
+.icn-feed {background-position:0 -726px;} 
+.icn-group-add {background-position:0 -792px;} 
+.icn-img {background-position:0 -858px;} 
+.icn-keyword-add {background-position:0 -924px;} 
+.icn-news-add {background-position:0 -990px;} 
+.icn-noncontracting {background:url(/static/img/icons.gif) no-repeat 0 -1056px !important; color:#630 !important;} 
+.icn-page-add {background-position:0 -1122px;} 
+.icn-page-delete {background-position:0 -1188px;} 
+.icn-page-edit {background-position:0 -1254px;} 
+.icn-pdf {background-position:0 -1320px;} 
+.icn-pestreport-add {background-position:0 -1386px;} 
+.icn-ppt {background-position:0 -1452px;} 
+.icn-preview {background-position:0 -1518px;} 
+.icn-project-add {background-position:0 -1584px;} 
+.icn-project {background-position:0 -1650px;} 
+.icn-publication-add {background-position:0 -1716px;} 
+.icn-required {background-position:0 -1782px;} 
+.icn-subscribe {background-position:0 -1848px;} 
+.icn-translatable {background-position:0 -1914px;} 
+.icn-txt {background-position:0 -1980px;} 
+.icn-user-add {background-position:0 -2046px;} 
+.icn-warning {background-position:0 -2112px; font-size:0.95em; color:#514721;} 
+.icn-www-add {background-position:0 -2178px;} 
+.icn-www {background-position:0 -2244px;} 
+.icn-xls {background-position:0 -2310px;} 
+.icn-zip {background-position:0 -2376px;}
+.icn-success {background-position:0 -2442px; font-size:0.95em; color:#264409;}
+.icn-territory {background:url(/static/img/icons.gif) no-repeat 0 -2508px !important;}
+.icn-backtotop {background-position:0 -2574px;}
+.icn-delete {background-position:0 -2640px;}
+
+p.backtotop a {background:url(/static/img/icons.gif) no-repeat 0 -2574px; padding:1px 0 2px 20px !important; }
+
+/* =Editing toolbar ----------------- */
+
+div.editingtoolbar {border:1px dashed #099 !important; background:#cff; margin:1em 0;}
+div.editingtoolbar form, div.editingtoolbar select {margin:0 !important; padding:0 !important; vertical-align:middle;}
+div.editingtoolbar ul {margin:0; padding:6px;}
+div.editingtoolbar li {display:inline; padding:0 12px 0 0; margin:0;}
+div.editingtoolbar a {color:#066; font-weight:bold !important;}
+
+p.edit {border:1px dashed #099 !important; background:#cff; display:block; float:right;}
+p.edit a {font-size:1.4em; font-weight:bold !important; background-image:url(/static/img/icons.gif); display:block; padding:0 0 0 18px; margin:1em; background-repeat:no-repeat; background-position: 0 -462px; min-height:16px !important; font-weight:bold; color:#066;} /* Background is defined as in =Icons section of screen.css */
+a.inlineaddnew {float:right; background-repeat:no-repeat; min-height:16px !important; background:url(/static/img/icons.gif) no-repeat 0 0; padding:0 0 0 18px; font-size:0.9em; line-height:1.4em; font-weight:normal; background:url(/static/img/icons.gif) no-repeat 0 0;}/* Background is defined as in =Icons section of screen.css */
+body#body_admin a.inlineaddnew {color:#fff !important;}
+
+span.util-links {font-size:0.8em;}
+span.util-links a {font-weight:normal !important; display:inline-block;}
+
+
+/*/* =help - uses ColorBox jQuery script */
+/* ColorBox Core Style */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:visible;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* ColorBox custom style */
+#cboxOverlay{background:#000;}
+
+#colorbox{}
+    #cboxContent{margin-top:32px;}
+        #cboxLoadedContent{background:#fff; padding:1px;}
+        #cboxLoadingGraphic{background:url(/static/img/indicator.gif) center center no-repeat;}
+        #cboxLoadingOverlay{background:#fff;}
+        #cboxTitle{position:absolute; top:-22px; left:0; color:#fff;}
+        #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+        #cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose{text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url(/static/img/colorbox-controls.png) 0 0 no-repeat;}
+        #cboxPrevious{background-position:0px 0px; right:44px;}
+        #cboxPrevious.hover{background-position:0px -25px;}
+        #cboxNext{background-position:-25px 0px; right:22px;}
+        #cboxNext.hover{background-position:-25px -25px;}
+        #cboxClose{background-position:-50px 0px; right:0;}
+        #cboxClose.hover{background-position:-50px -25px;}
+        .cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
+        .cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
+        .cboxSlideshow_on #cboxSlideshow.hover{background-position:-100px -25px;}
+        .cboxSlideshow_off #cboxSlideshow{background-position:-100px 0px; right:44px;}
+        .cboxSlideshow_off #cboxSlideshow.hover{background-position:-75px -25px;}
+div.helpitem {background:#ececec; height:auto; width:460px; padding:25px 30px 30px;}
+body.helplist div.helpitem {padding:0; margin-bottom:1em; background:none; width:40em;}
+div#help a {text-decoration:underline;}
+a.help {font-weight:bold !important; font-size:1.3em; display:inline-block; padding:0.25em 0.5em;}
+a.popupimg {background:url(/static/img/icons.gif) no-repeat right -858px; padding:1px 20px 2px 0 !important;}
+
+/* =Countryselector using jQuery =autocomplete --------------- */
+.ac_results {padding: 0px;border: 1px solid #ccc; background-color:#fff; overflow:hidden;}
+.ac_results ul {width: 100%;list-style-position: outside;list-style: none;padding: 0;margin: 0;}
+.ac_results iframe {display:none;position:absolute;top:0;left:0;z-index:-1;width:3000px;height:3000px;}
+.ac_results li {margin: 0px;padding: 2px 5px;cursor: pointer;display: block;width: 100%;font-size: 12px;overflow: hidden;}
+.ac_loading {background : #fff url(/static/img/indicator.gif) right center no-repeat;}.ac_over {background-color: #cf6;color: #000;}

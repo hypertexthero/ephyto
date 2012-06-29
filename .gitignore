@@ -1,0 +1,5 @@
+# Don't put settings_local.py in version control
+settings_local.py
+*.db
+*.sqlite
+*.pyc

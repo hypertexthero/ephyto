@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block head %}{{ block.super }}{% endblock head %}
+
+<body>
+
+{% block header %}{{ block.super }}{% endblock header %}
+{% block homelink %}ePhyto{% endblock %}
+
+
+<div id="content">
+{% block content %}
+    <h1>ePhyto</h1>
+
+<p><a href="/background/">Background Documents</a> »</p>
+
+            <table summary="ePhyto" id="ephyto" border="1" cellspacing="0" cellpadding="1">
+             <thead>
+              <tr>
+               <th scope="col">Link No.</th>
+               <th scope="col">Subject</th>
+               <th scope="col">Link URL</th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+                  <td colspan="3"><strong>Formats</strong></td>
+              </tr>
+            <tr>
+               <td>1</td>
+               <td><a href="/XML">WC3 Extensible Markup Language (XML)</a></td>
+               <td>http://ephyto.ippc.int/XML</td>
+              </tr>
+              <tr>
+               <td>2</td>
+               <td><a href="/UN-CEFACT-schema">UN/CEFACT SPS XML Schema</a></td>
+               <td>http://ephyto.ippc.int/UN-CEFACT-schema</td>
+              </tr>
+              <tr>
+               <td>3</td>
+               <td>IPPC ePhyto certificate for export</td>
+               <td>http://ephyto.ippc.int/Export</td>
+              </tr>
+              <tr>
+               <td>4</td>
+               <td>IPPC ePhyto certificate for re-export</td>
+               <td>http://ephyto.ippc.int/Re-export</td>
+              </tr>
+              <tr>
+                 <td>17</td>
+                 <td>IPPC replacement of phytosanitary certificates</td>
+                 <td>http://ephyto.ippc.int/ReplacementPC</td>
+                </tr>
+                <tr class="odd">
+                    <td colspan="3"><strong>Harmonized Codes</strong></td>
+                </tr>
+              <tr>
+               <td>5</td>
+               <td><a href="/ISO-country">ISO two-digit country</a></td>
+               <td>http://ephyto.ippc.int/ISO-country</td>
+              </tr>
+              <tr>
+               <td>6</td>
+               <td><a href="/EPPO-codes">EPPO Plant Protection Thesaurus</a></td>
+               <td>http://ephyto.ippc.int/EPPO-codes</td>
+              </tr>
+              <tr>
+               <td>7</td>
+               <td><a href="/Commodities">IPPC commodity class</a></td>
+               <td>http://ephyto.ippc.int/Commodities</td>
+              </tr>
+              <tr>
+               <td>8</td>
+               <td>UNECE recommendation 21 (packages and packaging materials)</td>
+               <td>http://ephyto.ippc.int/UNECE-recommendations</td>
+              </tr>
+              <tr>
+               <td>9</td>
+               <td>UNECE recommendation 20 (units of measure used in international trade)</td>
+               <td>http://ephyto.ippc.int/UNECE-recommendations</td>
+              </tr>
+              <tr>
+               <td>10</td>
+               <td>IPPC treatment types</td>
+               <td>http://ephyto.ippc.int/Tmt-types</td>
+              </tr>
+              <tr>
+               <td>11</td>
+               <td>Codex active ingredients</td>
+               <td>http://ephyto.ippc.int/Codex-ai</td>
+              </tr>
+              <tr>
+               <td>12</td>
+               <td>UNECE recommendation 20 (concentration, dosage, temperature and duration of exposure)</td>
+               <td>http://ephyto.ippc.int/UNECE-recommendations</td>
+              </tr>
+              <tr>
+               <td>13</td>
+               <td>IPPC additional declarations</td>
+               <td>http://ephyto.ippc.int/AD</td>
+              </tr>
+              <tr>
+               <td>14</td>
+               <td>UNECE recommendation 7 (numerical representation of dates, time and periods of time)</td>
+               <td>http://ephyto.ippc.int/UNECE-recommendations</td>
+              </tr>
+              <tr>
+               <td>15</td>
+               <td>UN/LOCODE for Trade and Transport Locations</td>
+               <td>http://ephyto.ippc.int/UN-LOCODE-locations</td>
+              </tr>
+              <tr>
+                  <td colspan="3"><strong>Exchange Mechanism</strong></td>
+              </tr>
+              <tr>
+               <td>16</td>
+               <td>UN/CEFACT encryption system</td>
+               <td>http://ephyto.ippc.int/UN-CEFACT-encryption</td>
+              </tr>
+             </tbody>
+            </table>
+{% endblock %}
+</div> <!-- end content -->
+
+{% block footer %}{{ block.super }}{% endblock footer %}
+
+</body>
+</html>

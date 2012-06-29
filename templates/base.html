@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block head %}
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="description" content="ePhyto - International Plant Protection Convention - Protecting the world's plant resources from pests" />
+    <meta name="keywords" content="ephyto, plant, protection, convention, pests" />
+
+    <link rel="stylesheet" type="text/css" href="/static/css/ippc3.0.css" media="screen" />
+    <link rel="stylesheet" href="/static/css/code.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="Shortcut Icon" href="/static/favicon.ico" type="image/x-icon" />
+    <script src="/static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/static/js/global.js" type="text/javascript"></script>
+
+    <title>{% block headtitle %}{% endblock %}ePhyto - International Plant Protection Convention</title>
+
+</head>
+{% endblock head %}
+
+<body>
+<div id="container">
+
+{% block header %}
+<div id="header">
+    
+    <div class="logo">
+        
+        <a class="imglink" href="https://www.ippc.int" title="Go to the IPPC homepage."><img src="/static/img/ippc-logo-title.gif" alt="International Plant Protection Convention - Protecting the world's plant resources from pests"></a>
+    </div> <!-- end logo -->
+
+    <p class="breadcrumbs">
+        <a href="https://www.ippc.int" title="Go to the IPPC homepage."><strong>www.ippc.int</strong></a> &rarr; {% block homelink %}<strong><a href="/">ePhyto</a></strong>{% endblock homelink %}{% block breadcrumbs %}{% endblock breadcrumbs %}
+    </p>
+
+</div> <!-- end div#header -->
+{% endblock header %}
+
+<div id="content">
+
+    {% block content %}{% endblock %}
+
+</div> <!-- end content -->
+
+{% block footer %}
+<div id="footer">
+
+{# Loading flatpages for displaying a flatpage list http://docs.djangoproject.com/en/dev/topics/templates/#loading-custom-template-libraries #}
+    {# {% load flatpages %} #}
+    {# {% get_flatpages as flatpages %} #}
+    {# <ul class="pagenav"> #}
+        {# {% for page in flatpages %} #}
+        {# <li><a href="{{ page.url }}">{{ page.title }}</a></li> #}
+        {# {% endfor %} #}
+    {# </ul> #}
+
+    <p class="small quiet">
+        
+        {# todo: make this 'page last updated time' - need to subclass flatpages model and add modified field:  #}
+        {# http://stackoverflow.com/questions/4011332/django-extend-flatpages-for-a-specific-application #}
+        {# add page order drag and drop while i'm at it: # http://djangosnippets.org/snippets/2047/ #}
+        {# http://www.michelepasin.org/techblog/2009/08/06/representing-hierarchical-data-with-django-and-mptt/ #}
+        
+        Last Update: {% now "H:i T" %} on the {% now "jS" %} of {% now "F Y" %}
+        <!-- <br /> Copyright © 2011 by IPPC -->
+    </p>
+</div> <!-- end footer -->
+{% endblock footer %}
+
+</div> <!-- end container -->
+</body>
+</html>
