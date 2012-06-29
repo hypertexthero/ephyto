@@ -4,6 +4,7 @@ from django.contrib.flatpages.models import FlatPage
 from django.contrib.flatpages.admin import FlatPageAdmin, FlatpageForm
 
 class FlatPageAdmin(admin.ModelAdmin):
+	exclude = ('enable_comments','template_name',)
 	save_on_top = True
 	pass
 

@@ -113,10 +113,26 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
+    'typogrify', # http://code.google.com/p/typogrify/source/browse/trunk/docs/typogrify.txt
     'south',
     # 'ephyto',
     'core',
     'staticgenerator',
+
+# http://gunicorn.org/run.html#gunicorn-django
+# ssh sgriffee@EXLQAIPPC1.ext.fao.org
+# cd /opt/django_projects/ephyto && . bin/activate && cd ephyto
+# gunicorn_django --bind localhost:8010 --pid /tmp/django-gunicorn-ephyto.pid --daemon
+
+# or, using shell script to set a pid for monit (make sure init.sh is executable before running with the following command: chmod +x init.sh):
+# init.sh start|stop|restart
+
+# command to reload gunicorn: 
+# kill -HUP `cat /tmp/django-gunicorn-ephyto.pid`
+
+# command to see what gunicorn processes are running
+# ps aux | grep gunicorn
+    'gunicorn',
 )
 
 # A sample logging configuration. The only tangible logging

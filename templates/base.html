@@ -5,8 +5,8 @@
 <head>
     
     <meta charset="utf-8" />
-    <meta name="description" content="ePhyto - International Plant Protection Convention - Protecting the world's plant resources from pests" />
-    <meta name="keywords" content="ephyto, plant, protection, convention, pests" />
+    <meta name="description" content="{% block headdescription %}{% endblock %}ePhyto - International Plant Protection Convention - Protecting the world's plant resources from pests" />
+    <meta name="keywords" content="ephyto, plant, protection, ippc, certification, trade, pests" />
 
     <link rel="stylesheet" type="text/css" href="/static/css/ippc3.0.css" media="screen" />
     <link rel="stylesheet" href="/static/css/code.css" type="text/css" media="screen" charset="utf-8" />
@@ -31,7 +31,7 @@
     </div> <!-- end logo -->
 
     <p class="breadcrumbs">
-        <a href="https://www.ippc.int" title="Go to the IPPC homepage."><strong>www.ippc.int</strong></a> &rarr; {% block homelink %}<strong><a href="/">ePhyto</a></strong>{% endblock homelink %}{% block breadcrumbs %}{% endblock breadcrumbs %}
+        <a href="https://www.ippc.int" title="Go to the IPPC homepage."><strong>www.ippc.int</strong></a> &rarr; <span class="homelink">{% block homelink %}<strong><a href="/">ePhyto</a></strong>{% endblock homelink %}</span>{% block breadcrumbs %}{% endblock breadcrumbs %}
     </p>
 
 </div> <!-- end div#header -->

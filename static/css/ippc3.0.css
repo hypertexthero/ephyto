@@ -33,6 +33,7 @@ ul.pagenav li a {padding:0.5em;}
 
 p {max-width:46em; font-size:0.9em; line-height:1.3em; margin:0.5em 0 1em;}
 p.breadcrumbs {float:left; padding:1em 1em 0; max-width:100% !important;}
+span.homelink {font-size:1.4em; font-weight:bold;}
 div.logo {padding:1em 1em 0;}
 p.ruler {clear:both; height:0; width:0; border:none; margin:0; padding:0; text-indent:-2000em;} /* hidden ruler to clear the floats above and at the same time provide a ruler divider for the header visible when CSS is off for older browsers */
 
@@ -124,6 +125,7 @@ div.quietlinks a {color:#999;}
 .small {font-size:0.9em;}
 .smaller {font-size:0.8em;}
 .highlight {background:#ffc !important;}
+.edit {padding:1em; background:#ffc;}
 .hightlightbold {background:#ffc !important; color:#000 !important;}
 .normal {font-weight:normal;}
 .lowercase {text-transform:lowercase;}
