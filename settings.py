@@ -71,13 +71,12 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'staticgenerator.middleware.StaticGeneratorMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', # enabling middleware for flatpages app 
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', # enabling middleware for flatpages app 
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -120,7 +119,7 @@ INSTALLED_APPS = (
     'staticgenerator',
 
 # http://gunicorn.org/run.html#gunicorn-django
-# ssh sgriffee@EXLQAIPPC1.ext.fao.org
+# ssh username@servername.tld
 # cd /opt/django_projects/ephyto && . bin/activate && cd ephyto
 # gunicorn_django --bind localhost:8010 --pid /tmp/django-gunicorn-ephyto.pid --daemon
 
@@ -157,6 +156,19 @@ INSTALLED_APPS = (
 #         },
 #     }
 # }
+
+
+# Put in settings_local.py:
+# 
+# # Note that the static files in django_projects/ephyto/public will only be generated after they are visited once
+# STATIC_GENERATOR_URLS = (
+#     r'^/$',
+#     r'^/()', # matches any page created?
+#     # (r'^$', 'direct_to_template', {'template': 'base.html'}),
+#     # r'^/(blog|about|projects|opa)',
+#     # r'^/(archive)',
+# )
+
 
 try:
     from settings_local import *
